@@ -1,0 +1,163 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body{
+    font-family:"Poppins";
+}
+.cursor{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #00719c;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: .1s;
+}
+.cursor2{
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background-color: #00719c;
+    opacity: 0.6;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: .05s;
+}
+  .navbar-nav .nav-link.active {
+    color: #009bd6;
+    border-bottom: 3px solid #009bd6;
+}
+.navbar-nav .nav-link:hover{
+    color: #009bd6;
+}
+.nav-link{
+    color: #000;
+}
+.main{
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
+    backdrop-filter: blur(20px);
+}
+.first{
+  background-image: url("rain_background.png");
+  background-size: cover;  
+  background-position: center;  
+  background-repeat: no-repeat;  
+}
+.btn{
+    width:60%;
+    background-color:#00719c;
+    border-radius: 0%;
+    color: #fff;
+}
+.btn:hover{
+    color: #00719c;
+    background: transparent;
+    border: 2px solid #00719c;
+    transition: .5s;
+}
+
+.about{
+    background-color: #001F2B;
+}
+.about-right{
+    min-height: 50vh;
+    background:url(img.jpg);
+    background-position: center;
+    background-size: cover;
+}
+@media (min-width:576px){
+
+.about-right{
+    min-height: 50vh;
+    background-color: #fff;
+    box-shadow: 12px 12px #009bd6;
+    
+}
+
+.btn{
+    width:30%;
+    background-color:#00719c;
+    border-radius: 0%;
+    color: #fff;
+}
+.first{
+  background-image: url('rain_background.png');
+  background-size: cover;
+  height: 100vh;  
+  background-repeat: no-repeat;  
+}
+.main{
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    width: 50vw;
+}
+
+}
+.fade-words::before {
+  content: "Bienvenue";
+  animation: fadeWords 12s infinite;
+  display: inline-block;
+  color: #000;
+  transition: opacity 1s ease;
+}
+.fa-brands ,.fa-solid{
+    color: #009bd6;
+    font-size: 3rem;
+}
+.top{
+    background-color: #00415A;
+}
+.contact-left{
+    border: 2px solid #00719c;
+}
+.form-control:focus {
+  border-color: #00719c;
+  box-shadow: 0 0 0 0.25rem rgba(13, 145, 162, 0.25); /* optional glow */
+}
+.contact-left label{
+    font-size: .9rem;
+}
+.form-control{
+    border: none;
+    border-bottom: 2px solid #00719c;
+    border-radius: 0;
+}
+.contact-right{
+    background-color: #00719c;
+}
+
+@keyframes fadeWords {
+  0%, 20% {
+    content: "Bienvenue";
+    opacity: 1;
+  }
+  25%, 45% {
+    content: "Welcome";
+    opacity: 1;
+  }
+  50%, 70% {
+    content: "欢迎";
+    opacity: 1;
+  }
+  75%, 100% {
+    content: "Bienvenidos";
+    opacity: 1;
+  }
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid transparent;
+    }
+}
