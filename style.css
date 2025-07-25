@@ -6,32 +6,7 @@ html, body {
 body{
     font-family:"Poppins";
 }
-.cursor{
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #00719c;
-    border-radius: 50%;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-    transform: translate(-50%,-50%);
-    transition: .1s;
-}
-.cursor2{
-    position: fixed;
-    width: 15px;
-    height: 15px;
-    background-color: #00719c;
-    opacity: 0.6;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-    transform: translate(-50%,-50%);
-    transition: .05s;
-}
+
   .navbar-nav .nav-link.active {
     color: #009bd6;
     border-bottom: 3px solid #009bd6;
@@ -42,11 +17,41 @@ body{
 .nav-link{
     color: #000;
 }
-#hamburger-icon, #close-icon {
-  transition: opacity 0.3s ease;
+.modal-content{
+  border-radius: 0;
+  height: 100vh;
 }
-#close-icon {
-  display: none;
+.modal.modal-right .modal-dialog{
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 0;
+  height: 100vh;
+  max-width: 75%;
+  width: 100%;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+}
+.modal-nav-link {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.modal-nav-link i {
+  position: absolute;
+  left: .1rem;
+  font-size: 1.2rem;
+}
+.modal.modal-right.show .modal-dialog {
+  transform: translateX(0);
+}
+
+.navbar-toggler:focus {
+    outline: none !important;
+    box-shadow: none !important;
 }
 .main{
     border: 1px solid rgba(255,255,255,0.2);
@@ -80,25 +85,10 @@ body{
   display: inline-block;
 }
 .progress-container {
-  width: 100%; 
-  height: .5rem;
-  background-color: #e0e0e0;
-  border-radius: 0px;
-  position: relative;
-  overflow: hidden;
+  visibility: hidden;
 }
 .progress-bar {
-  width: 0%;
-  height: 100%;
-  background-color: orange;
-  border-radius: 0px; 
-  transition: width 1s ease;
-}
-.col-lg:hover .progress-bar {
-  width: 75%;
-}
-.col-sm:hover .progress{
-width: 75%;
+  visibility: hidden;
 }
 .title-underline::after {
   content: '';
@@ -114,14 +104,19 @@ width: 75%;
     background:url(img.jpg);
     background-position: center;
     background-size: cover;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+.cursor2{
+ visibility: hidden;
+}
+.cursor{
+ visibility: hidden;
 }
 @media (min-width:576px){
 
 .about-right{
     min-height: 50vh;
-    background-color: #fff;
-    box-shadow: 12px 12px #009bd6;
-    
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 .btn{
     width:30%;
@@ -142,7 +137,64 @@ width: 75%;
     border-radius: 20px;
     width: 50vw;
 }
-
+.col-lg:hover .progress-bar {
+  width: 75%;
+}
+.col-sm:hover .progress{
+width: 75%;
+}
+.skills{
+  transition: 1s;
+}
+.skills:hover{
+  background-color: rgb(245, 245, 245);
+  box-shadow:0 10px 12px rgb(187, 187, 187);
+}
+.progress-container{
+  visibility: visible;
+  width: 100%; 
+  height: .5rem;
+  background-color: #e0e0e0;
+  border-radius: 0px;
+  position: relative;
+  overflow: hidden;
+}
+.progress-bar{
+  visibility: visible;
+  width: 0%;
+  height: 100%;
+  background-color: #00719c;
+  border-radius: 0px; 
+  transition: width 1s ease;
+}
+.cursor{
+    position: fixed;
+    visibility: visible;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #00719c;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: .1s;
+}
+.cursor2{
+    position: fixed;
+    visibility: visible;
+    width: 15px;
+    height: 15px;
+    background-color: #00719c;
+    opacity: 0.6;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: .05s;
+}
 }
 .fade-words::before {
   content: "Bienvenue";
@@ -171,7 +223,7 @@ width: 75%;
 }
 .form-control:focus {
   border-color: #00719c;
-  box-shadow: 0 0 0 0.25rem rgba(13, 145, 162, 0.25); /* optional glow */
+  box-shadow: 0 0 .4rem .4rem rgba(13, 145, 162, 0.25);
 }
 .contact-left label{
     font-size: .9rem;

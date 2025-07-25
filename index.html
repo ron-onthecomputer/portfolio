@@ -24,10 +24,10 @@
     <nav class="navbar navbar-expand-sm ms-auto sticky-top" style="background-color: #fff;">
   <div class="container">
     <a class="navbar-brand fw-bold" href="#" style="font-family: courier prime;">RonCreates</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-  <i class="fa-solid fa-bars" id="hamburger-icon" style="color: #00719c; font-size: 1.6rem"></i>
-  <i class="fa-solid fa-xmark" id="close-icon" style="color: #00719c; font-size: 1.6rem; display: none;"></i>  <!-- Initially hidden -->
+<button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#mobileModal" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <i class="fa-solid fa-bars" style="color: #00719c; font-size: 1.6rem"></i>
 </button>
+
     <div class="collapse navbar-collapse text-center" style="background-color: #fff;" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto mb-2 fw-bold small">
         <a class="nav-link active mx-3" aria-current="page" href="#">HOME</a>
@@ -38,6 +38,25 @@
   </div>
 </nav>
 <!--navbar ends-->
+
+<!--modal-->
+<div class="modal fade modal-right" id="mobileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm m-0">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <div class="ms-auto text-center m-2 fw-bold ">
+        <div class="modal-nav-link"><a class="nav-link m-3 mb-4" href="#"><i class="fa-solid fa-house"></i>HOME</a></div>
+        <div class="modal-nav-link"><a class="nav-link m-3 mb-4" href="#about"><i class="fa-solid fa-circle-info"></i>ABOUT</a></div>
+        <div class="modal-nav-link"><a class="nav-link m-3 mb-4" href="#contact"> <i class="fa-solid fa-phone"></i>CONTACT</a></div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal end-->
 
 <!-- Home Sections begins-->
 <section id="home">
@@ -72,7 +91,6 @@
 
       <!--about right-->
       <div class="col-sm-5 about-right mb-3 mt-3">
-
       </div>
     </div>
   </div>
@@ -83,13 +101,13 @@
 <!--About-cont-->
 
 <section id="about-cont">
-<div class="container-fluid min-vh-100 text-center align-content-center">
+<div class="container-fluid min-vh-100 text-center align-content-center mt-5">
   <p class="h1 fw-bold title-underline" >About me</p>
 
   <!--about-container-top-->
 
 <div class="container top mt-4 mb-5 p-3 lh-3" style="width: 75%;">
-  <p style="color: #fff;" class="fw-bold">A self-motivated developer with a lifelong fascination for computers and <br /> technology.  Driven by curiosity and a passion for 
+  <p style="color: #fff; font-size: 1.2rem;" class="fw-bold p-3">A self-motivated developer with a lifelong fascination for computers and <br /> technology.  Driven by curiosity and a passion for 
     learning,I am  <br /> constantly exploring new tools and techniques to bring ideas to life  <br />through code.</p>
 </div>
 <p class="h1 fw-bold title-underline">Skills</p>
@@ -98,39 +116,39 @@
 
 <div class="container bottom mt-4 mb-5 lh-2">
     <div class="row text-center g-2 p-2">
-        <div class="col-lg">
-          <i class="fa-solid fa-pen-ruler mb-3"></i>
+        <div class="col-lg skills">
+          <i class="fa-solid fa-pen-ruler m-3"></i>
           <p>UI designs that focus on clarity, consistency, and user-friendly layouts. 
             Creating interfaces that are visually appealing and
             combine design principles with real user needs.</p>
-          <span class="fw-bold" style="color: orange;">Level : Intermediate</span>
+          <span class="fw-bold" style="color: #00719c;">Level : Intermediate</span>
               <div class="progress-container m-2 w-75 d-inline-block">
                   <div class="progress-bar progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
               </div>          
         </div>
-          <div class="col-lg">
-            <i class="fa-brands fa-html5 mb-2"></i>
+          <div class="col-lg skills">
+            <i class="fa-brands fa-html5 m-2"></i>
             <p>Good understanding of HTML, building well-structured and semantic markup
               focusing on accessibility and clean code that forms the foundation of responsive, maintainable websites.</p>
-            <span class="fw-bold" style="color: orange;">Level : Intermediate</span>
+            <span class="fw-bold" style="color: #00719c;">Level : Intermediate</span>
               <div class="progress-container m-2 w-75 d-inline-block">
                   <div class="progress-bar progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
           </div>
-          <div class="col-sm">
-            <i class="fa-brands fa-css3-alt mb-2"></i>
+          <div class="col-sm skills">
+            <i class="fa-brands fa-css3-alt m-2"></i>
             <p>Decent with CSS to create visually consistent, responsive layouts while keeping the
             importance of design systems, spacing, and modular styling for scalable front-end development.</p>
-            <span class="fw-bold" style="color: orange;">Level : Intermediate</span>
+            <span class="fw-bold" style="color: #00719c;">Level : Intermediate</span>
               <div class="progress-container m-2 w-75 d-inline-block">
                   <div class="progress-bar progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
               </div>            
           </div>
-        <div class="col-sm">
-          <i class="fa-brands fa-js mb-2"></i>
+        <div class="col-sm skills">
+          <i class="fa-brands fa-js m-2"></i>
           <p>Foundational understanding of JavaScript to create interactive features. While I haven't fully mastered it yet,
              I'm constantly learning and improving through hands-on practice.</p>
-          <span class="fw-bold" style="color: red;">Level: Beginner</span>
+          <span class="fw-bold" style="color: #00719c;">Level: Beginner</span>
         </div>
     </div>
 </div>
@@ -193,8 +211,8 @@
           </div>
   </footer>
 </section>
-        <div class="cursor d-sm-none"></div>
-        <div class="cursor2 d-sm-none"></div>
+        <div class="cursor"></div>
+        <div class="cursor2"></div>
         <script src="script.js"></script>
   </body>
 </html>
